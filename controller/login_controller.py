@@ -12,13 +12,13 @@ class LoginController:
         if self.user_service.validate_login(usuario, senha):
             self.view.trocar_para_pesquisa()
         else:
-            self.view.mostrar_mensagem("Erro", "Usuário ou senha incorretos.\nSe é sua primeira vez aqui, experimente se cadastrar.")
+            return ("Usuário ou senha incorretos.\nSe é sua primeira vez aqui, experimente se cadastrar.")
         
     def cadastrar_user(self, usuario, senha):
         if self.user_service.create_user(usuario, senha):
-            self.view.mostrar_mensagem("Sucesso", "Cadastro realizado com sucesso!\n Pressione 'login' para entrar.")
+            return ("Cadastro realizado com sucesso!\n Pressione 'login' para entrar.")
         else:
-            self.view.mostrar_mensagem("Erro", "Usuário já cadastrado.\nSe já possui um cadastro, experimente logar.")
+            return ("Usuário já cadastrado.\nSe já possui um cadastro, experimente logar.")
 
     def buscar_filme(self, titulo):
         resultados = self.tmdb_service.buscar_filme_por_titulo(titulo)

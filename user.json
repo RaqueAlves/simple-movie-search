@@ -4,11 +4,19 @@
         "password": "123"
     },
     {
-        "username": "GUI",
-        "password": "12345"
+        "username": "GUi",
+        "password": "123"
     },
     {
-        "username": "Aninha",
+        "username": "ANA",
+        "password": "banana"
+    },
+    {
+        "username": "GUI",
+        "password": "123"
+    },
+    {
+        "username": "w",
         "password": "123"
     }
 ]

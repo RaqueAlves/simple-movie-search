@@ -4,11 +4,14 @@ import tkinter as tk
 from tkinter import messagebox
 
 class AppView:
+
     def __init__(self, controller):
         self.root = tk.Tk()
         self.controller = controller
 
-        self.root.geometry("300x400")
+        self.root.title("Busca de Filmes")
+        self.root.geometry("400x600")
+        self.root.configure(bg="#f0f0f0")
 
         self.login_frame = LoginFrame(self.root, controller)
         self.search_frame = SearchFrame(self.root, controller)
